@@ -1,5 +1,5 @@
 
-const Shoecard = ({ imgURL,changeBigShoeImage, BigShoeImage }) => {
+const ShoeCard = ({ imgURL,changeBigShoeImage, BigShoeImage }) => {
         const handleClick = () => {
             if(bigShoeImg !== imgURL.bigShoe){
                 changeBigShoeImage(imgURL.bigShoe)
@@ -17,13 +17,16 @@ const Shoecard = ({ imgURL,changeBigShoeImage, BigShoeImage }) => {
     onClick={handleClick}
     
     >
-        <div>
+        <div className='flex justify-center items-center bg-card bg-center bg-cover sm:w-40 sm:h-40 rounded-xl max-sm:p-4'>
             <img src={imgURL.thumbnail}
-             alt="" />
+          alt='shoe colletion'
+          width={127}
+          height={103.34}
+          className='object-contain'/>
         </div>
     </div>
   
 )
 }
 
-export default Shoecard
+export default ShoeCard
